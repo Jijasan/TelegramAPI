@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="TelegramApi-js-1.0-SNAPSHOT">
+    <output-path>C:\Users\karpy\OneDrive\Documents\TelegramApi\build\libs</output-path>
+    <root id="archive" name="TelegramApi-js-1.0-SNAPSHOT.jar">
+      <element id="module-output" name="TelegramApi.jsMain" />
+    </root>
+  </artifact>
+</component>

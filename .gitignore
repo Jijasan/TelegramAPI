@@ -1,3 +1,9 @@
 # Project exclude paths
 /.gradle/
+<<<<<<< HEAD
 /build/
+=======
+/build/
+/build/classes/kotlin/jvm/main/
+/build/classes/kotlin/jvm/test/
+>>>>>>> Initial commit
