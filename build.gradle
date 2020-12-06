@@ -3,9 +3,11 @@ plugins {
     id 'org.jetbrains.kotlin.plugin.serialization' version '1.4.10'
 }
 
-group 'org.example'
-version '1.0-SNAPSHOT'
+apply plugin: 'maven'
 
+group='com.github.KS2003'
+
+version '1.0-SNAPSHOT'
 repositories {
     google()
     mavenCentral()
