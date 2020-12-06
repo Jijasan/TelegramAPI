@@ -1,5 +1,4 @@
-import kotlinx.serialization.decodeFromString
-import kotlinx.serialization.json.Json
+import com.github.KS2003.telegramAPI.*
 
 fun main() {
     val bot = Bot(System.getenv("token"))
