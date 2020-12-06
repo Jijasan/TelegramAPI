@@ -1,10 +1,8 @@
-import com.sun.javaws.Globals
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
 import java.net.URL
-import javax.xml.bind.JAXBElement
 import kotlin.concurrent.thread
 import kotlin.math.max
 
@@ -23,9 +21,9 @@ class Bot(var token: String) {
                 last = max(last, upd.update_id+1)
                 if (upd.message == null)
                     return@forEach
-                if (upd.message!!.text != null) {
+                if (upd.message.text != null) {
                     commands.forEach { (command, functor) ->
-                        if (command in upd.message!!.text!!)
+                        if (command in upd.message.text)
                             GlobalScope.launch { functor.invoke(upd.message, null)}
                     }
                 }
@@ -33,8 +31,6 @@ class Bot(var token: String) {
             Thread.sleep(1000)
         }
     }
-
-    fun finish() = myThread.stop()
 
     fun sendMessage(
         chat: Int, text: String, parse_mode: String? = null, entities: List<MessageEntity>? = null,
